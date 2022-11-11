@@ -1,0 +1,70 @@
+<html>
+<body>
+<div class = title >My Beautiful JS Calculator</div>
+<table border="2">
+<tr>
+<td><input type="button" value="c" onClick="clr()"/> </td>
+<td colspan="3"><input type="text" id="textval"/></td>
+</tr>
+<tr>
+<td><input type="button" value="+" onClick="display('+')"/> </td>
+<td><input type="button" value="1" onClick="display('1')"/> </td>
+<td><input type="button" value="2" onClick="display('2')"/> </td>
+<td><input type="button" value="3" onClick="display('3')"/> </td>
+</tr>
+<tr>
+<td><input type="button" value="-" onClick="display('-')"/> </td>
+<td><input type="button" value="4" onClick="display('4')"/> </td>
+<td><input type="button" value="5" onClick="display('5')"/> </td>
+<td><input type="button" value="6" onClick="display('6')"/> </td>
+</tr>
+<tr>
+<td><input type="button" value="*" onClick="display('*')"/> </td>
+<td><input type="button" value="7" onClick="display('7')"/> </td>
+<td><input type="button" value="8" onClick="display('8')"/> </td>
+<td><input type="button" value="9" onClick="display('9')"/> </td>
+</tr>
+<tr>
+<td><input type="button" value="/" onClick="display('/')"/> </td>
+<td><input type="button" value="." onClick="display('.')"/> </td>
+<td><input type="button" value="0" onClick="display('0')"/> </td>
+<td><input type="button" value="=" onClick="evaluate()"/> </td>
+</tr>
+</table>
+</body>
+<script>
+function display(val)
+{
+ document.getElementById("textval").value+=val
+ }
+function evaluate()
+{
+ let x = document.getElementById("textval").value
+ let y = eval(x)
+ document.getElementById("textval").value = y
+}
+function clr()
+{
+ document.getElementById("textval").value = ""
+}
+</script>
+<style>
+input[type="button"]
+{
+border-radius: 10px;
+background-color:blue;
+color: white;
+border-color:#black ;
+width:100%;
+}
+input[type="text"]
+{
+border-radius: 10px;
+text-align: right;
+background-color:black;
+color: white;
+border-color: white;
+width:100%
+}
+</style>
+</html>

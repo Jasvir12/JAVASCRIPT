@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Detect If Enter Key is Pressed in a Text Input Field with jQuery</title>
+<script>
+    $(document).on("keypress", "input", function(e){
+        if(e.which == 13){
+            var inputVal = $(this).val();
+            alert("You've entered: " + inputVal);
+        }
+    });
+</script>
+</head>
+<body>
+    <p><strong>Note:</strong> Type something in the text input box and press enter key.</p>      
+    <p><input type="text"></p>      
+</body>
+</html>

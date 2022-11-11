@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<button id="elem">Click me</button>
+<!-- HTML attribute: onclick="...".
+DOM property: elem.onclick = function.
+Methods: elem.addEventListener(event, handler[, phase]) to add, removeEventListener to remove.-->
+<script>
+  class Menu {
+    handleEvent(event) {
+      // mousedown -> onMousedown
+      let method = 'on' + event.type[0].toUpperCase() + event.type.slice(1);
+      this[method](event);
+    }
+
+    onMousedown() {
+      elem.innerHTML = "Mouse button pressed";
+    }
+
+    onMouseup() {
+      elem.innerHTML += "...and released.";
+    }
+  }
+
+  let menu = new Menu();
+  elem.addEventListener('mousedown', menu);
+  elem.addEventListener('mouseup', menu);
+</script>
+</body>
+</html>

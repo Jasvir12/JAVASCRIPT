@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Sandwich</title>
+<style>
+.button {
+  background-color:#FF8080;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button1 {border-radius: 30%;}
+</style>
+</head>
+
+<body bgcolor="#FFCACA">
+<h1>Special vegetarian Sandwich</h1>
+<img src="1.jpg" width="500" height="500">
+<p> Main ingredients of PB&J sandwich are.</p>
+ <ul style="list-style-type:disc;">
+    <li> Sandwich Bread</li>
+	<li> Peanut Butter</li>
+	<li> Jelly</li>
+	</ul>
+<p>Check out this yummy recipe <a href="#">Here</a></p>
+<p> Rate your dish here!</p>
+ <button class="button button1" onclick="displayResult()">1</button> <button class="button button1" onclick="displayResult2()">2</button><button class="button button1" onclick="displayResult3()">3</button><button class="button button1" onclick="displayResult4()">4</button><button class="button button1 " onclick="displayResult5()">5</button>
+ 
+ <script>
+function displayResult() {
+window.alert("Very Poor" );
+}
+
+function displayResult2() {
+window.alert("Improve"  );
+}
+function displayResult3() {
+window.alert("Better");
+}
+function displayResult4() {
+window.alert("Good");
+}
+function displayResult5() {
+window.alert("Heavens!");
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style>
+li {list-style-type: none;
+font-size: 16pt;
+}
+.mail {
+margin: auto;
+padding-top: 10px;
+padding-bottom: 10px;
+width: 800px;
+background : rgb(153, 198, 211);
+border: 1px soild rgb(1, 20, 24);
+}
+.mail h2 {
+margin-left: 38px;
+}
+input {
+font-size: 20pt;
+}
+input:focus, textarea:focus{
+background-color: lightyellow;
+}
+input submit {
+font-size: 10pt;
+}
+
+
+.button {
+  background-color:#FF8080;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+
+.button1 {border-radius: 30%;}
+
+input:focus {
+    background-color:#00FF66;
+}
+</style>
+</head>
+
+
+
+
+
+<body onload='document.form1.text1.focus()'>
+<div class="mail">
+<h2>Enter email to Validate</h2>
+<form name="form1" action="#">
+<ul>
+
+		  <li>
+	Change Text Box color	  <input id="inputElementID" /></li>
+		  <li>
+   Date Of birth <input type="date" value="date" />
+	</li>
+<li>Email<input type='text' name='text1'/></li>
+<li> </li>
+<li class="Validate"><input type="submit" name="Validate" value="Validate" onclick="ValidateEmail(document.form1.text1)"/></li>  
+<li> </li>
+</ul>
+</form>
+</div>
+<script>
+function ValidateEmail(inputText)
+{
+var mailformat = /^w+([.-]?w+)*@w+([.-]?w+)*(.w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+alert(" valid email address!");    
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert(" invalid email address!");    
+document.form1.text1.focus();
+return false;
+}
+}
+</script>
+
+ <button class="button button1" onClick="displayResult()">Will Recommend</button> <button class="button button1" onClick="displayResult2()">Good</button><button class="button button1" onClick="displayResult3()">neutral</button><button class="button button1" onClick="displayResult4()">Choose not a answer</button><button class="button button1 " onClick="displayResult5()">Will not recommend</button>
+ 
+ <script>
+function displayResult() {
+window.alert("Thank You" );
+}
+
+function displayResult2() {
+window.alert("Thank You"  );
+}
+function displayResult3() {
+window.alert("Thank You");
+}
+function displayResult4() {
+window.alert("Thank You");
+}
+function displayResult5() {
+window.alert("Enter there suggestions!");
+}
+</script>
+</body>
+</body>
+</html>

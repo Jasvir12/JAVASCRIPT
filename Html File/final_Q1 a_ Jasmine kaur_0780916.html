@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<style>
+        div {
+            width: 400px;
+            height: 130px;
+            border: 2px solid black;
+            padding: 15px;
+            position: absolute;
+            left: 27%;
+        }
+    </style>
+</head>
+<body>
+<h1></h1>
+    <form onSubmit="return myFun()" style="text-align:center;" action="final_Q1 b_ Jasmine kaur_0780916.html">
+        Username: <input type="text"  id="User_Name" value="">
+        <span id="Message"></span>
+        <br><br>
+		 <b>Password:</b>
+            <input type="text" 
+                   onkeypress="return onlyNumberKey(event)" 
+                   maxlength="11" 
+                   size="50%" />
+  <br><br>
+    <input type="submit"  value="Submit"> <input type="reset" value="Reset">
+        </form>
+        <script>
+           function myFun()
+            
+           {
+             var correct_way = /^[A-za-z]+$/;
+
+             var a =document.getElementById("User_Name").value;
+
+             if(a=="")
+             {
+                 document.getElementById("Message").innerHTML="** Please fill username";
+                 return false;
+                
+             }
+             if(a.length<3)
+             {
+                document.getElementById("Message").innerHTML="**  username must be 3character";
+                 return false;
+                
+             }
+             if(a.length>20)
+             {
+                document.getElementById("Message").innerHTML="**  username must be less than 20 character";
+                 return false;
+                
+             }
+             if(a.match(correct_way))
+                 true;
+                 else{
+                    document.getElementById("Message").innerHTML="**  only alphabets are allowed";
+                 return false;
+
+
+                 
+             }
+             }
+             
+        </script>
+		
+		<script>
+    function onlyNumberKey(evt) {
+          
+        // Only ASCII character in that range allowed
+        var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+            return false;
+        return true;
+    }
+</script>
+<script>
+    function detailssubmit() {
+        alert("Your details were Submitted");
+    }
+</script>
+  
+</body>
+</html>
